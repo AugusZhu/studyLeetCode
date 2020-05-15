@@ -1,5 +1,7 @@
 package com.feyfey.learn.utils;
 
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,11 +14,13 @@ import java.util.zip.ZipOutputStream;
 
 public class ZipCompress {
     /**
-     *
      * @param files
      * @param baseFolder
      * @param zos
      */
+
+    private static final Logger logger = Logger.getLogger(AES.class);
+
 
     private static void zip(File[] files, String baseFolder, ZipOutputStream zos) {
         try {
@@ -62,7 +66,7 @@ public class ZipCompress {
             // 关闭
             zos.close();
         } catch (Exception e) {
-            System.out.println("压缩文件夹失败");
+            logger.info("压缩文件夹失败");
             e.printStackTrace();
         }
     }
