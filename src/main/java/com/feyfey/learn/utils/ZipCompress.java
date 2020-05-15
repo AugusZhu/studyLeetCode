@@ -20,9 +20,6 @@ public class ZipCompress {
 
     private static void zip(File[] files, String baseFolder, ZipOutputStream zos) {
         try {
-
-            //System.out.println("start");
-
             // buffer
             byte[] buffer = new byte[2048];
             // input
@@ -50,12 +47,10 @@ public class ZipCompress {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //System.out.println("end");
     }
 
-    public static String compress(String filePath, String baseFolder) {
+    public static void compress(String filePath, String baseFolder) {
         try {
-            //System.out.println("compress start");
             // 来源
             File inputDir = new File(filePath);
             // 目标
@@ -70,8 +65,5 @@ public class ZipCompress {
             System.out.println("压缩文件夹失败");
             e.printStackTrace();
         }
-        //System.out.println("compress end");
-        return "success";
-
     }
 }
