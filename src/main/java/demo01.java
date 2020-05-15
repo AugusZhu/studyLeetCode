@@ -11,7 +11,7 @@ public class demo01 {
      * 输入:
      * nums1 = [1,2,3,0,0,0], m = 3
      * nums2 = [2,5,6],       n = 3
-     *
+     * <p>
      * 输出: [1,2,2,3,5,6]
      */
 
@@ -27,7 +27,7 @@ public class demo01 {
     }
 
     /**
-     *  双指针 / 从后往前
+     * 双指针 / 从后往前
      * 方法二已经取得了最优的时间复杂度O(n + m)O(n+m)，但需要使用额外空间。这是由于在从头改变nums1的值时，需要把nums1中的元素存放在其他位置
      */
 
@@ -51,26 +51,18 @@ public class demo01 {
     }
 
 
-
     public static void main(String[] args) {
-
-
         int[] nums1 = new int[]{1, 2, 3, 0, 0, 0};
         int[] nums2 = new int[]{2, 5, 6};
         int m = 3;
         int n = 3;
         demo01 d = new demo01();
         //方法一
-        int[] array = d.merge01(nums1,m,nums2,n);
+        int[] array = d.merge01(nums1, m, nums2, n);
         System.out.println(Arrays.toString(array));
 
         //方法二
-        int[] array2 = d.merge02(nums1,m,nums2,n);
+        int[] array2 = d.merge02(nums1, m, nums2, n);
         System.out.println(Arrays.toString(array2));
-
-
-
-
-
     }
 }
