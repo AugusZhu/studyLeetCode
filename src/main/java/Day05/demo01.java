@@ -1,4 +1,10 @@
 package Day05;
+/**
+ * @Author: ZhuXianfei
+ * @Date: 2020/5/26 17:26
+ * @Revision: 1.0
+ * @Description:
+ */
 
 public class demo01 {
     /**
@@ -28,8 +34,10 @@ public class demo01 {
      * 输入：num = 123
      * 输出：12
      */
+
     public boolean isOdd(int a){
-        if(a%2 != 0){   //是奇数
+        //是奇数
+        if(a%2 != 0){
             return true;
         }
         return false;
@@ -49,7 +57,7 @@ public class demo01 {
     }
 
     public static void main(String[] args) {
-        int num = 123;
+        int num = 23;
         demo01 d1 = new demo01();
         System.out.println(d1.numberOfSteps(num));
     }
