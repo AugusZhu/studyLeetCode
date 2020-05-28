@@ -59,6 +59,9 @@ public class demo03 {
 
     public static void main(String[] args) {
         demo03 d3 = new demo03();
+        System.out.println(d3.sumNums1(3));
+        System.out.println(d3.sumNums2(3));
         System.out.println(d3.sumNums3(3));
+        System.out.println(d3.sumNums(3));
     }
 }
