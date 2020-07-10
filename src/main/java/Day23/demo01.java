@@ -61,9 +61,7 @@ public class demo01 {
 
         logger.info("---------开始执行---------");
         String rs1 = Integer.toString(d1.maxProfit(prices));
-        ;
         String rs2 = Integer.toString(d1.maxProfit2(prices));
-        ;
         logger.info(rs1);
         logger.info(rs2);
         logger.info("---------执行结束---------");
