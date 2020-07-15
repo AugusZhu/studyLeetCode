@@ -1,7 +1,5 @@
 package Day25;
 
-import org.apache.poi.hssf.util.HSSFRegionUtil;
-
 /**
  * @Author: ZhuXianfei
  * @Date: 2020/7/14 22:23
@@ -10,7 +8,7 @@ import org.apache.poi.hssf.util.HSSFRegionUtil;
  */
 public class demo02 {
     //func1
-    public  String reverseStr(String s) {
+    public String reverseStr(String s) {
         char[] chr = s.toCharArray();
         StringBuffer resStr = new StringBuffer();
         for (int i = chr.length - 1; i >= 0; i--) {
@@ -22,18 +20,18 @@ public class demo02 {
 
 
     //
-    private  String reverseString2(String str) {
+    private String reverseStr2(String str) {
 
-        if (str.length() == 1)
+        if (str.length() == 1) {
             System.out.println(str);
-        else {
+        } else {
             String subString1 = str.substring(0, str.length() - 1);
             String subString2 = str.substring(str.length() - 1);
-
             System.out.print(subString2);
-
-            reverseString2(subString1);
+            reverseStr2(subString1);
         }
+
+        return null;
 
     }
 

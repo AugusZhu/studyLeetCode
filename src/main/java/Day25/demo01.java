@@ -59,7 +59,7 @@ public class demo01 {
     public static void main(String[] args) {
         int n1 = 5;
         int n2 = 7;
-        System.out.println("(" + n1 + "," + n2 + ")" + "=" + get_gcd2(n1, n2));
+        System.out.println("(" + n1 + "," + n2 + ")" + "=" + get_gcd(n1, n2));
         System.out.println("[" + n1 + "," + n2 + "]" + "=" + get_lcm(n1, n2));
     }
 
