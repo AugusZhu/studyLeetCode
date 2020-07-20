@@ -1,5 +1,7 @@
 package Day25;
 
+import java.util.Scanner;
+
 /**
  * @Author: ZhuXianfei
  * @Date: 2020/7/14 17:05
@@ -57,10 +59,16 @@ public class demo01 {
     }
 
     public static void main(String[] args) {
-        int n1 = 5;
-        int n2 = 7;
-        System.out.println("(" + n1 + "," + n2 + ")" + "=" + get_gcd(n1, n2));
-        System.out.println("[" + n1 + "," + n2 + "]" + "=" + get_lcm(n1, n2));
+//        int n1 = 5;
+//        int n2 = 7;
+//        System.out.println("(" + n1 + "," + n2 + ")" + "=" + get_gcd(n1, n2));
+//        System.out.println("[" + n1 + "," + n2 + "]" + "=" + get_lcm(n1, n2));
+        Scanner scanner = new Scanner(System.in);
+        while(scanner.hasNext()){
+            int n1 = scanner.nextInt();
+            int n2 = scanner.nextInt();
+            System.out.println(get_lcm(n1, n2));
+        }
     }
 
 }
