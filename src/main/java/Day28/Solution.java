@@ -3,6 +3,13 @@ package Day28;
 import java.util.LinkedList;
 import java.util.List;
 
+
+/**
+ * @Author: ZhuXianfei
+ * @Date: 2020/7/21 19:03
+ * @Revision: 1.0
+ * @Description:
+ */
 class Solution {
     public List<TreeNode> generateTrees(int n) {
         if (n == 0) {
