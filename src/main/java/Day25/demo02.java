@@ -1,5 +1,9 @@
 package Day25;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * @Author: ZhuXianfei
  * @Date: 2020/7/14 22:23
@@ -36,9 +40,16 @@ public class demo02 {
     }
 
     public static void main(String[] args) {
-        demo02 d2 = new demo02();
-        String s = "I am a student";
 
-        System.out.println(d2.reverseStr(s));
+        try {
+            demo02 d2 = new demo02();
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String input = br.readLine();
+            //StringBuffer output = new StringBuffer();
+            System.out.println(d2.reverseStr(input));
+        } catch (IOException e) {
+            e.toString();
+        }
+
     }
 }
