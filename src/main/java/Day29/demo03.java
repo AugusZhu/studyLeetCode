@@ -11,23 +11,29 @@ import java.util.Scanner;
  */
 public class demo03 {
 
+    /**
+     * 一个数字 去掉几位数字后的最小值
+     *
+     * @param args
+     */
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             String a = in.next();
             int b = in.nextInt();
-            System.out.println(removeStr(a,b));
+            System.out.println(removeStr(a, b));
         }
     }
 
 
-    public static String  removeStr(String num,int k){
+    public static String removeStr(String num, int k) {
         LinkedList<Character> stack = new LinkedList<Character>();
 
-        for (char dight:num.toCharArray()){
-            while (stack.size()>0 && k>0 && stack.peekLast()>dight){
+        for (char dight : num.toCharArray()) {
+            while (stack.size() > 0 && k > 0 && stack.peekLast() > dight) {
                 stack.removeLast();
-                k-=1;
+                k -= 1;
             }
             stack.addLast(dight);
         }
@@ -35,14 +41,17 @@ public class demo03 {
         StringBuilder ret = new StringBuilder();
         boolean leadZero = true;
 
-        for (char dight:stack){
-            if(leadZero && dight == '0'){
-                continue;}
-                leadZero = false;
-                ret.append(dight);
+        for (char dight : stack) {
+            if (leadZero && dight == '0') {
+                continue;
+            }
+            leadZero = false;
+            ret.append(dight);
         }
 
-        if (ret.length() == 0) {return  "0";}
+        if (ret.length() == 0) {
+            return "0";
+        }
         return ret.toString();
 
     }
